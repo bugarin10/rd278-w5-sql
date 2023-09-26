@@ -1,3 +1,5 @@
+[![Test workflow for Python template](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml)
+
 
 # Connecting database with SQLite
 
