@@ -15,6 +15,13 @@ jobs:
     - name: Install dependencies
       run: |
         make install
+    - name: Create the dataset
+      run: |
+        make create_table
+    - name: test connection
+      run: |
+        make test
+      
     - name: Lint with pylint
       run: |
         make lint
