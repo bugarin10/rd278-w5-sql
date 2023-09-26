@@ -9,7 +9,7 @@ REQUIREMENTS := requirements.txt
 
 # Default target
 
-.PHONY: all env install test format lint clean
+.PHONY: all env install format lint clean
 
 # Install project dependencies
 
@@ -20,6 +20,7 @@ install:
 	$(VENV)/bin/pip install --upgrade pip -r  $(REQUIREMENTS)
 
 # Run unit tests
+# Test connection
 test:
 	$(VENV)/bin/pytest $(TEST_DIR)
 
