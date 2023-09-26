@@ -38,7 +38,9 @@ with open(CSV_FILE_PATH, "r", newline="", encoding="utf-8") as csv_file:
 
     for row in csv_reader:
         cursor.execute(
-            "INSERT INTO happiness_table(country, log_gdp_pc, social_support, life_exp, freedom, generosity, corruption) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO happiness_table(country, \
+            log_gdp_pc, social_support, life_exp, \
+            freedom, generosity, corruption) VALUES (?, ?, ?, ?, ?, ?, ?)",
             row,
         )
 

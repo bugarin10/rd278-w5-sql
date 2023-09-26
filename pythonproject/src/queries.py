@@ -11,7 +11,8 @@ conn = sqlite3.connect("pythonproject/src/data/happiness_database.db")
 cursor = conn.cursor()
 
 # First query: Select all countries where social support is greater than the average social support
-QUERY_1 = "SELECT country FROM happiness_table WHERE social_support > (SELECT AVG(social_support) FROM happiness_table)"
+QUERY_1 = "SELECT country FROM happiness_table WHERE social_support > \
+(SELECT AVG(social_support) FROM happiness_table)"
 
 for i in cursor.execute(QUERY_1):
     print(i)
