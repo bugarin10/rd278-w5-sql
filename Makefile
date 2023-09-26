@@ -20,7 +20,7 @@ install:
 	$(VENV)/bin/pip install --upgrade pip -r  $(REQUIREMENTS)
 
 create_table:
-	$(PYTHON) pythonproject/src/data/building_dataset.py
+	$(VENV)/bin/$(PYTHON) $(SRC_DIR)/building_dataset.py
 
 # Run unit tests
 # Test connection
