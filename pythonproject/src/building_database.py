@@ -4,7 +4,7 @@ import os
 
 
 # Step 1: Establish a connection to the SQLite database
-conn = sqlite3.connect("pythonproject/src/data/happiness_database.db")
+conn = sqlite3.connect("data/happiness_database.db")
 
 
 # Step 2: Create a cursor object
@@ -27,7 +27,7 @@ cursor.execute(create_table_sql)
 
 # Step 4: Open the CSV file and populate the SQLite table
 
-csv_file_path = "pythonproject/src/data/happiness_data.csv"
+csv_file_path = "data/happiness_data.csv"
 
 with open(csv_file_path, "r", newline="", encoding="utf-8") as csv_file:
     csv_reader = csv.reader(csv_file)
