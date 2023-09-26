@@ -1,0 +1,6 @@
+pylint
+pytest
+black
+matplotlib
+polars
+
