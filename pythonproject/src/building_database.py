@@ -10,7 +10,11 @@ conn = sqlite3.connect("data/happiness_database.db")
 # Step 2: Create a cursor object
 cursor = conn.cursor()
 
-# Step 3: Create a table with the desired schema
+# Step 3: Drop the table if it exists
+drop_table_sql = "DROP TABLE IF EXISTS happiness_table"
+cursor.execute(drop_table_sql)
+
+# Step 4: Create a table with the desired schema
 create_table_sql = """
 CREATE TABLE happiness_table (
     country TEXT PRIMARY KEY,
@@ -19,13 +23,13 @@ CREATE TABLE happiness_table (
     life_exp FLOAT,
     freedom FLOAT,
     generosity FLOAT,
-    corruption FLOAT
+    corruption FLOAT    
     
 )
 """
 cursor.execute(create_table_sql)
 
-# Step 4: Open the CSV file and populate the SQLite table
+# Step 5: Open the CSV file and populate the SQLite table
 
 csv_file_path = "data/happiness_data.csv"
 
@@ -40,6 +44,6 @@ with open(csv_file_path, "r", newline="", encoding="utf-8") as csv_file:
             row,
         )
 
-# Step 5: Commit the changes and close the connection
+# Step 6: Commit the changes and close the connection
 conn.commit()
 conn.close()

@@ -9,7 +9,7 @@ REQUIREMENTS := requirements.txt
 
 # Default target
 
-.PHONY: all env install format lint clean
+.PHONY: all env install create_table test format lint clean
 
 # Install project dependencies
 
@@ -18,6 +18,9 @@ env:
 
 install:
 	$(VENV)/bin/pip install --upgrade pip -r  $(REQUIREMENTS)
+
+create_table:
+	$(VENV)/bin/python3 pythonproject/src/python3 building_dataset.py
 
 # Run unit tests
 # Test connection
@@ -36,5 +39,5 @@ lint:
 clean:
 	rm -rf $(VENV) __pycache__ .pytest_cache
 
-all: 
-	env install test format lint
+all:
+	env install create_table test format lint clean
