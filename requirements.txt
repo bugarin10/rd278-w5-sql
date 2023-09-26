@@ -2,7 +2,6 @@ pylint
 pytest
 black
 matplotlib
-polars
 sqlite3
 pandas
 numpy
