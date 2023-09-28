@@ -1,4 +1,4 @@
-[![Test workflow for Python template](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml)
+[![Test workflow for Python template](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml/badge.svg?branch=main)](https://github.com/bugarin10/rd278-w5-sql/actions/workflows/pythonapp.yml)
 
 
 # Connecting database with SQLite
@@ -18,3 +18,13 @@ The data is from the happiness index and can be found [here](https://worldhappin
 ## Test:
 
 A test is made to see if the database is connected.
+
+
+## The process flow
+
+![Process](https://github.com/bugarin10/rd278-w5-sql/blob/main/Process.png)
+
+## Query Screenshot
+
+![Screenshot](https://github.com/bugarin10/rd278-w5-sql/blob/main/Query%20in%20terminal.png)
+
