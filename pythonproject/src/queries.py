@@ -2,7 +2,6 @@
 This module contains queries for the happiness database.
 """
 import sqlite3
-import os
 import fire
 
 # Step 1: Establish a connection to the SQLite database
@@ -12,10 +11,11 @@ conn = sqlite3.connect("pythonproject/src/data/happiness_database.db")
 cursor = conn.cursor()
 
 # First query: Select all countries where social support is greater than the average social support
-QUERY_1 = "SELECT * FROM happiness_table WHERE social_support > (SELECT AVG(social_support) FROM happiness_table) LIMIT 3"
+QUERY_1 = "SELECT * FROM happiness_table WHERE social_support > \
+(SELECT AVG(social_support) FROM happiness_table) LIMIT 3"
 
-for i in cursor.execute(QUERY_1):
-    print(i)
+for c in cursor.execute(QUERY_1):
+    print(c)
 
 print("\n")
 
@@ -35,19 +35,20 @@ def main(query):
     Main function for the queries module.
     """
     # Step 1: Establish a connection to the SQLite database
-    conn = sqlite3.connect("pythonproject/src/data/happiness_database.db")
+    conn2 = sqlite3.connect("pythonproject/src/data/happiness_database.db")
 
     # Step 2: Create a cursor object
-    cursor = conn.cursor()
+    cursor2 = conn2.cursor()
 
-    # First query: Select all countries where social support is greater than the average social support
+    # First query: Select all countries where social
+    # support is greater than the average social support
     query_1 = query
 
-    for i in cursor.execute(query_1):
-        print(i)
+    for k in cursor2.execute(query_1):
+        print(k)
     print("\n")
 
-    conn.close()
+    conn2.close()
 
 
 if __name__ == "__main__":
